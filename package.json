@@ -7,10 +7,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:github": "vite build --mode github-pages",
+    "build:vercel": "vite build",
+    "build:railway": "vite build",
     "predeploy": "npm run build:github && touch dist-github/.nojekyll",
     "deploy": "gh-pages -d dist-github --dotfiles",
+    "deploy:vercel": "vercel --prod",
+    "deploy:railway": "railway up",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "vite preview --host 0.0.0.0 --port $PORT",
+    "start": "vite preview --host 0.0.0.0 --port $PORT",
     "shadcn": "npx shadcn-ui add"
   },
   "dependencies": {

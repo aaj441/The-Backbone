@@ -68,26 +68,30 @@ Because you're tired of setting up the same stack for the 100th time. This templ
 
 ## Deployment
 
-This template comes with an easy GitHub Pages deployment setup.
+This template supports multiple deployment platforms:
 
-1. Push your changes to GitHub.
+### 🚀 Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy automatically with zero configuration
 
-2. Run the deployment command:
+### 🚂 Railway
+1. Push your code to GitHub
+2. Connect your repository to [Railway](https://railway.app)
+3. Deploy automatically with zero configuration
 
+### 🐳 Docker
+```bash
+docker build -t claude-artifacts-starter .
+docker run -p 3000:3000 claude-artifacts-starter
 ```
+
+### 📦 GitHub Pages
+```bash
 npm run deploy
 ```
 
-3. Set up GitHub Pages:
-
-- Go to your repository settings
-- Navigate to Pages
-- Set the source to "gh-pages" branch
-- Save
-
-Your site will be live at `https://yourusername.github.io/your-repo-name/`
-
-Note: This setup uses HashRouter, which works out of the box with GitHub Pages. No additional configuration is needed for routing to work correctly.
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## Credits
 
