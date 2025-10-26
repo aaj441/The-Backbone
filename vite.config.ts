@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react-swc";
 import Pages from "vite-plugin-pages";
 import getRepoName from "git-repo-name";
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
     const isGitHubPages = mode === 'github-pages'
     const base = isGitHubPages ? `/${getRepoName.sync()}/` : '/'
   
