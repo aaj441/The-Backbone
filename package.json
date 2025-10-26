@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist-github --dotfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "start": "vite preview --port 3000 --host",
     "shadcn": "npx shadcn-ui add"
   },
   "dependencies": {
