@@ -6,7 +6,7 @@ import getRepoName from "git-repo-name";
 
 export default defineConfig(({ mode }) => {
     const isGitHubPages = mode === 'github-pages'
-    const base = isGitHubPages ? `/${getRepoName.sync()}/` : '/'
+    const base = isGitHubPages ? `/${getRepoName}/` : '/'
   
     return {
       plugins: [react(), Pages()],
